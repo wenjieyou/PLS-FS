@@ -29,7 +29,7 @@ Partial least squares based feature selection
 %         Application Review, vol. 41, no. 6, pp. 830-841, Nov. 2011.
 %
 %   [2] W. You, Z. Yang, and G. Ji, PLS-based Recursive Feature Elimination
-%         for High-imensional Small Sample.
+%         for High-imensional Small Sample, Knowledge-based systems, vol. 55, pp.15-28 2014.
 %=================================================
 
 
