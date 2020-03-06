@@ -27,6 +27,7 @@ Partial least squares based feature selection
 %   [1] G. Ji, Z. Yang, and W. You, PLS-based Gene Selection and Identification
 %         of Tumor-Specific Genes, IEEE Transactions on Systems, Man, Cybernetics C,
 %         Application Review, vol. 41, no. 6, pp. 830-841, Nov. 2011.
+%
 %   [2] W. You, Z. Yang, and G. Ji, PLS-based Recursive Feature Elimination
 %         for High-imensional Small Sample.
 %=================================================
