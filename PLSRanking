@@ -27,7 +27,7 @@ function [ind_feat,rank_feat]=PLSRanking(trn,ytrn,nfac)
 %         of Tumor-Specific Genes, IEEE Transactions on Systems, Man, Cybernetics C,
 %         Application Review, vol. 41, no. 6, pp. 830-841, Nov. 2011.
 %   [2] W. You, Z. Yang, and G. Ji, PLS-based Recursive Feature Elimination
-%         for High-imensional Small Sample.
+%         for High-imensional Small Sample, Knowledge-Based Systems, vol. 55, pp. 15-28, 2014.
 %=================================================
 
 if nargin<3 || isempty(nfac)
