@@ -1,36 +1,58 @@
-# PLS-FS
-Partial least squares based feature selection
-%===============================================
-%   PLSRanking - PLS-based feature ranking
-%===============================================
-% @Input
-%  TRN  -  training examples
-%  YTRN - training labels
-%   NFAC - number of  latent variables (factors), NFAC defaults to 'number of categories'.
-%   TRN is a data matrix whose rows correspond to points (or observations) and whose
-%   columns correspond to features (or predictor variables). YTRN is a column vector
-%   of response values or class labels for each observations in TRN.  TRN and YTRN
-%   must have the same number of rows.
-%
-% @Output
-%   IND_FEAT  -  indices of columns in TRN ordered by feature importance.
-%   RANK_FEAT - feature weights with large positive weights assigned to important feature.
-%
-%   Code by: Wenjie, You, 2012.07.25
-%   wenjie.you@hotmail.com
-%
-%   Example:
-%   load BCdat.mat
-%   [ind_feat, rank_feat] = PLSRanking(trn, ytrn, 2);
-%================================================
-%   Reference:
-%   [1] G. Ji, Z. Yang, and W. You, PLS-based Gene Selection and Identification
-%         of Tumor-Specific Genes, IEEE Transactions on Systems, Man, Cybernetics C,
-%         Application Review, vol. 41, no. 6, pp. 830-841, Nov. 2011.
-%
-%   [2] W. You, Z. Yang, and G. Ji, PLS-based Recursive Feature Elimination
-%         for High-imensional Small Sample, Knowledge-based systems, vol. 55, pp.15-28 2014.
-%=================================================
+# PLS-based Feature Selection (plsfs)
 
+This Python package provides Partial Least Squares (PLS) based feature selection methods for high-dimensional data. The package includes four main algorithms:
 
- 
+1. **PLS-based feature ranking algorithm (plsfrc)**: A weak selector for feature ranking.
+2. **PLS-based recursive feature elimination (plsrfec)**: A robust feature selector for classification tasks.
+3. **PLS-based local recursive feature elimination (plslrfec)**: Suitable for multi-category data.
+4. **Multi-perturbations ensemble feature selection (mpegs_pls)**: Generates diverse feature subsets.
+
+## Usage
+
+The package provides a simple interface for feature selection. Here's a brief overview of each method:
+
+### 1. PLS-based Feature Ranking Algorithm (plsfrc)
+
+```python
+rank_feat, vip_feat = plsfrc(trn, ytrn, nfac)
+```
+
+### 2. PLS-based Recursive Feature Elimination (plsrfec)
+
+```python
+rfe_ind = plsrfec(trn, ytrn, nfac=4)
+```
+
+### 3. PLS-based Local Recursive Feature Elimination (plslrfec)
+
+```python
+rfe_ind = plslrfec(trn, ytrn)
+```
+
+### 4. Multi-Perturbations Ensemble Feature Selection (mpegs_pls)
+
+```python
+idx_feat, w_feat = mpegs_pls(trn, ytrn, nit=2000, nfac=2)
+```
+
+## Example
+
+```python
+from scipy.io import loadmat
+
+data = loadmat('dat/SRBCT.mat')
+trn = data['trn']
+ytrn = data['ytrn']
+
+# Feature selector (test our algorithm)
+rank_feat, vip_feat = plsfrc(trn, ytrn, 2)
+```
+
+## References
+
+1. W. You, Z. Yang, and G. Ji, "PLS-based gene subset augmentation and tumor-specific gene identification," Computers in Biology and Medicine, Volume 174, 2024, 108434, [Link](https://doi.org/10.1016/j.compbiomed.2024.108434)
+2. W. You, Z. Yang, and G. Ji, "PLS-based Recursive Feature Elimination for High-dimensional Small Sample," Knowledge-Based Systems, Vol. 55, 2014, Pages 15-28, [Link](https://www.sciencedirect.com/science/article/pii/S0950705113003158)
+3. W. You, Z. Yang, and G. Ji, Feature selection for high-dimensional multi-category data using PLS-based local recursive feature elimination, Expert Systems with Applications, Vol. 41, Issue 4, Part 1, 2014, Pages 1463-1475, [Link]
+(https://www.sciencedirect.com/science/article/pii/S0957417413006647)
+4. G. Ji, Z. Yang, and W. You, PLS-based Gene Selection and Identification of Tumor-Specific Genes, IEEE Transactions on Systems, Man, Cybernetics C, Application Review, vol. 41, no. 6, 2011, pp.830-841, [Link] https://ieeexplore.ieee.org/abstract/document/5607317
+
