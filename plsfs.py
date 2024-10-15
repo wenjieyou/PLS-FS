@@ -428,9 +428,8 @@ if __name__ == '__main__':
     rank_feat, vip_feat = plsfrc(trn,ytrn,2)
     
     # PLS-based recursive feature elimination (robust)
-    # rfe_ind = plsrfec(trn, ytrn, 4)
-     
-    # 基于PLS局部递归特征消除的特征选择 (适合于多分类)
+    # rfe_ind = plsrfec(trn, ytrn, 4)     
+    
     # PLS-based local recursive feature elimination (multi-category classification)
     # rfe_ind = plslrfec(trn, ytrn)    
     
