@@ -54,5 +54,5 @@ rank_feat, vip_feat = plsfrc(trn, ytrn, 2)
 2. W. You, Z. Yang, and G. Ji, "PLS-based Recursive Feature Elimination for High-dimensional Small Sample," Knowledge-Based Systems, Vol. 55, 2014, Pages 15-28, [Link](https://www.sciencedirect.com/science/article/pii/S0950705113003158)
 3. W. You, Z. Yang, and G. Ji, Feature selection for high-dimensional multi-category data using PLS-based local recursive feature elimination, Expert Systems with Applications, Vol. 41, Issue 4, Part 1, 2014, Pages 1463-1475, [Link](https://www.sciencedirect.com/science/article/pii/S0957417413006647)
 4. G. Ji, Z. Yang, and W. You, PLS-based Gene Selection and Identification of Tumor-Specific Genes, IEEE Transactions on Systems, Man, Cybernetics C, Application Review, vol. 41, no. 6, 2011, pp.830-841, [Link](https://ieeexplore.ieee.org/abstract/document/5607317)
-5. Z. Yang, G. Ji, and W. You, Using partial least squares and support vector machines for bankruptcy prediction, Expert Systems with Applications, Vol.38, Issue 7, 2011, Pages 8336-8342, [Link]https://www.sciencedirect.com/science/article/pii/S0957417411000418
+5. Z. Yang, G. Ji, and W. You, Using partial least squares and support vector machines for bankruptcy prediction, Expert Systems with Applications, Vol.38, Issue 7, 2011, Pages 8336-8342, [Link](https://www.sciencedirect.com/science/article/pii/S0957417411000418)
 
