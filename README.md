@@ -40,7 +40,7 @@ idx_feat, w_feat = mpegs_pls(trn, ytrn, nit=2000, nfac=2)
 ```python
 from scipy.io import loadmat
 
-data = loadmat('dat/SRBCT.mat')
+data = loadmat('dat/BCdat.mat')
 trn = data['trn']
 ytrn = data['ytrn']
 
