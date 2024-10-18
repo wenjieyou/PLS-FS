@@ -5,31 +5,31 @@ This Python package provides Partial Least Squares (PLS) based feature selection
 1. **PLS-based feature ranker for classification (plsfrc)**: A weak selector for feature ranking.
 2. **PLS-based recursive feature elimination for classification (plsrfec)**: A robust feature selector for classification tasks.
 3. **PLS-based local recursive feature elimination for classification (plslrfec)**: Suitable for multi-category data.
-4. **PLS-based multi-perturbations ensemble gene selection (mpegs_pls)**: Generates diverse feature subsets, identifying weak signals genes.
+4. **PLS-based multi-perturbations ensemble gene selection (mpegs_pls)**: Generates diverse feature subsets, identifying weak signals genes. It can be further expanded into PLS-based gene subset augmentation (PLSGSA).
 
 ## Usage
 
 The package provides a simple interface for feature selection. Here's a brief overview of each method:
 
-### 1. PLS-based Feature Ranking Algorithm (plsfrc)
+### 1. PLS-based Feature Ranker for Classification (plsfrc)
 
 ```python
 rank_feat, vip_feat = plsfrc(trn, ytrn, nfac)
 ```
 
-### 2. PLS-based Recursive Feature Elimination (plsrfec)
+### 2. PLS-based Recursive Feature Elimination for Classification (plsrfec)
 
 ```python
 rfe_ind = plsrfec(trn, ytrn, nfac=4)
 ```
 
-### 3. PLS-based Local Recursive Feature Elimination (plslrfec)
+### 3. PLS-based Local Recursive Feature Elimination for Classification (plslrfec)
 
 ```python
 rfe_ind = plslrfec(trn, ytrn)
 ```
 
-### 4. Multi-Perturbations Ensemble Feature Selection (mpegs_pls)
+### 4. PLS-based multi-Perturbations Ensemble Gene Selection (mpegs_pls)
 
 ```python
 idx_feat, w_feat = mpegs_pls(trn, ytrn, nit=2000, nfac=2)
