@@ -2,10 +2,10 @@
 
 This Python package provides Partial Least Squares (PLS) based feature selection methods for high-dimensional data. The package includes four main algorithms:
 
-1. **PLS-based feature ranking algorithm (plsfrc)**: A weak selector for feature ranking.
-2. **PLS-based recursive feature elimination (plsrfec)**: A robust feature selector for classification tasks.
-3. **PLS-based local recursive feature elimination (plslrfec)**: Suitable for multi-category data.
-4. **Multi-perturbations ensemble feature selection (mpegs_pls)**: Generates diverse feature subsets.
+1. **PLS-based feature ranking for classification (plsfrc)**: A weak selector for feature ranking.
+2. **PLS-based recursive feature elimination for classification (plsrfec)**: A robust feature selector for classification tasks.
+3. **PLS-based local recursive feature elimination for classification (plslrfec)**: Suitable for multi-category data.
+4. **PLS-based multi-perturbations ensemble gene selection (mpegs_pls)**: Generates diverse feature subsets, identifying weak signals genes.
 
 ## Usage
 
